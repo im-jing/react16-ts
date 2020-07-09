@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "../../App";
+
+import "./index";
 
 const LikeButton: React.FC = () => {
   const [like, setLike] = useState(0);
@@ -38,7 +40,7 @@ const LikeButton: React.FC = () => {
       >
         {like}
       </button>
-      <button style={style} onClick={handleClicked}>
+      <button className="red" style={style} onClick={handleClicked}>
         click me
       </button>
       <input type="text" ref={domRef} />
