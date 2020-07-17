@@ -1,18 +1,11 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
-import { ThemeContext } from "../../App";
 
-import "./index";
+import "./index.scss";
 
 const LikeButton: React.FC = () => {
   const [like, setLike] = useState(0);
   const likeRef = useRef(0);
   const domRef = useRef<HTMLInputElement>(null);
-  const theme = useContext(ThemeContext);
-  console.log(theme, "=theme=");
-  const style = {
-    color: theme.color,
-    background: theme.background,
-  };
 
   // 修改useRef的值，组件不会重新render
   function handleClicked() {
@@ -40,7 +33,7 @@ const LikeButton: React.FC = () => {
       >
         {like}
       </button>
-      <button className="red" style={style} onClick={handleClicked}>
+      <button className="red" onClick={handleClicked}>
         click me
       </button>
       <input type="text" ref={domRef} />

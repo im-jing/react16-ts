@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./mixin";
+@import "../../ui-design/button/index";
+
+body,
+html {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+.app {
+  height: 100%;
+  display: flex;
+}
+.menu {
+  flex: 4;
+  border-right: $border-width $border-color solid;
+}
+.content {
+  flex: 20;
+}
