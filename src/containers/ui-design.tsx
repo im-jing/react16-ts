@@ -1,16 +1,17 @@
 import React from "react";
 import Button from "../ui-design/button";
 
-import "../static/style/index.scss";
-
 const UiDesign = () => {
   return (
     <div className="content">
       <Button btnType="primary" btnSize="lg" disabled>
-        aaa
+        Large Primary
       </Button>
       <Button btnType="default" btnSize="sm">
-        bbb
+        Small Default
+      </Button>
+      <Button btnType="danger" btnSize="sm">
+        Danger
       </Button>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import menuDatas from "../data/menu";
+import menuDatas from "../data/routes";
 
 interface menu {
   title: string;

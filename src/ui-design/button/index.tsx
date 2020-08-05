@@ -19,7 +19,7 @@ const Button: React.FC<BaseButtonProps> = (props) => {
   const classes = classNames("btn", {
     [`btn-${btnType}`]: btnType,
     [`btn-${btnSize}`]: btnSize,
-    // disabled,
+    "btn-disabled": disabled,
   });
   return (
     <button className={classes} disabled={disabled}>

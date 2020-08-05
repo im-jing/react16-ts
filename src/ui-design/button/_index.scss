@@ -1,12 +1,54 @@
 .btn {
   display: inline-block;
-  font-weight: $btn-font-weight;
   line-height: $line-height-base;
   color: $body-color;
   text-align: center;
   border: $btn-border-width;
-  padding: $btn-padding-y $btn-padding-x;
-  font-size: $btn-font-size;
-  border-radius: $border-radius;
   cursor: pointer;
+  @include btn-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $border-radius
+  );
+}
+
+.btn-lg {
+  @include btn-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $border-radius
+  );
+}
+
+.btn-sm {
+  @include btn-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $border-radius
+  );
+}
+
+.btn-primary {
+  @include btn-style(
+    $primary,
+    $primary,
+    $white,
+    $hover-background: lighten($primary, 7.5%),
+    $hover-border: lighten($primary, 10%),
+    $hover-color: $white
+  );
+}
+
+.btn-danger {
+  @include btn-style(
+    $danger,
+    $danger,
+    $white,
+    $hover-background: lighten($danger, 7.5%),
+    $hover-border: lighten($danger, 10%),
+    $hover-color: $white
+  );
 }

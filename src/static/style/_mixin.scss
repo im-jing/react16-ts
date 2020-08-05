@@ -1,0 +1,37 @@
+@import "./variables";
+
+@mixin btn-size($padding-x, $padding-y, $font-size, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+@mixin btn-style(
+  $background,
+  $border,
+  $color,
+  $hover-background: lighten($background, 7.5%),
+  $hover-border: lighten($border, 10%),
+  $hover-color: $color
+) {
+  background: $background;
+  color: $color;
+  border-color: $border;
+  &:hover {
+    color: $color;
+    background: $background;
+    border-color: $border;
+  }
+  &:focus,
+  &.focus {
+    color: $color;
+    background: $background;
+    border-color: $border;
+  }
+  &:disabled,
+  &.disabled {
+    color: $color;
+    background: $background;
+    border-color: $border;
+  }
+}

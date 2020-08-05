@@ -1,0 +1,43 @@
+.cart {
+  max-width: 400px;
+  margin: auto;
+}
+
+.item-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  justify-content: space-between;
+}
+
+.checkbox-wrap {
+  margin-right: 8px;
+  flex: 3;
+}
+
+.item-info {
+  flex: 1;
+  text-align: right;
+  padding-right: 24px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-all {
+  display: flex;
+  align-items: center;
+}
+
+.check-all input {
+  margin-right: 8px;
+}
+
+.total-container {
+  text-align: right;
+  color: #f00;
+  font-weight: bold;
+}
