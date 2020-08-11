@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, Key } from "react";
 
-type ICartItem = {
+export type ICartItem = {
   key: number;
   checked: boolean;
   price: number;
@@ -19,7 +19,7 @@ const useCart = (props: Props) => {
   const initialValue = 0;
 
   const rowSelection = {
-    onChange: (selectedRowKeys: any, selectedRows: any) => {
+    onChange: (selectedRowKeys: Key[], selectedRows: ICartItem[]) => {
       console.log(
         `selectedRowKeys: ${selectedRowKeys}`,
         "selectedRows: ",
@@ -33,7 +33,7 @@ const useCart = (props: Props) => {
     getCheckboxProps: (record: any) => ({}),
   };
 
-  const getSumPrice = (rows: []): number =>
+  const getSumPrice = (rows: ICartItem[]): number =>
     rows.reduce(
       (accumulator: number, currentValue: any) =>
         accumulator + currentValue.price,
@@ -43,6 +43,7 @@ const useCart = (props: Props) => {
   return {
     checkedList,
     rowSelection,
+    getSumPrice,
   };
 };
 

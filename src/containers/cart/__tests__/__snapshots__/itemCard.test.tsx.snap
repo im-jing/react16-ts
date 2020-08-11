@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`itemCard component should render the itemCard component correctly 1`] = `
+<div>
+  <div
+    class="item-card"
+    role="item-card"
+  >
+    <div
+      class="checkbox-wrap"
+    >
+      <label
+        class="ant-checkbox-wrapper ant-checkbox-wrapper-checked"
+      >
+        <span
+          class="ant-checkbox ant-checkbox-checked"
+        >
+          <input
+            checked=""
+            class="ant-checkbox-input"
+            type="checkbox"
+            value="3"
+          />
+          <span
+            class="ant-checkbox-inner"
+          />
+        </span>
+      </label>
+      <span>
+        desk
+      </span>
+    </div>
+    <p
+      class="item-info"
+    >
+      ￥
+      1000
+    </p>
+  </div>
+</div>
+`;

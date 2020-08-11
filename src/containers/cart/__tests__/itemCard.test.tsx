@@ -1,22 +1,22 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { getByTestId } from "@testing-library/dom";
 import "@testing-library/jest-dom";
 
 import ItemCard, { Props } from "../itemCart";
 
 const testProps: Props = {
+  id: 3,
   checkStatus: true,
   unitPrice: 1000,
   itemContent: "desk",
 };
 
 describe("itemCard component", () => {
-  it("should render the itemCard component", () => {
-    const { container } = render(<ItemCard {...testProps} />);
-    // const element = getByTestId(container, 'test-item-card')
+  it("should render the itemCard component correctly", () => {
+    const { container, debug, getByRole } = render(<ItemCard {...testProps} />);
+    // debug(getByRole('item-card'))
 
-    // expect(element).toHaveClass('item-card')
-    // expect(container).toMatchSnapshot()
+    expect(getByRole("item-card")).toHaveClass("item-card");
+    expect(container).toMatchSnapshot();
   });
 });
