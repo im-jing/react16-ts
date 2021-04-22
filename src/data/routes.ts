@@ -2,6 +2,8 @@ import Home from "../containers/home";
 import UiDesign from "../containers/ui-design";
 import Book from "../containers/book/index";
 import Cart from "../containers/cart/index";
+// import Leetcode from "../containers/leetcode/index"
+import Floorplan from "../containers/floorplan/index";
 
 const routes = [
   {
@@ -23,6 +25,16 @@ const routes = [
     title: "购物车列表",
     path: "/cart",
     component: Cart,
+  },
+  // {
+  //   title: "leetcode",
+  //   path: "/leetcode",
+  //   component: Leetcode,
+  // },
+  {
+    title: "floorplan",
+    path: "/floorplan",
+    component: Floorplan,
   },
 ];
 
