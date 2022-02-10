@@ -82,7 +82,7 @@
     "@typescript-eslint/parser": "^4.9.1",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "3.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "sass-loader": "^9.0.2",
     "ts-jest": "^26.1.3"
   },
